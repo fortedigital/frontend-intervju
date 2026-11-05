@@ -1,4 +1,4 @@
-# [Case-oppgave](case-oppgave.md)
+# [Case-oppgave](Case-oppgave.md)
 
 # Kodeoppgave: søkefelt med debounce
 
