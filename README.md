@@ -1,3 +1,5 @@
+# [Case-oppgave](case-oppgave.md)
+
 # Kodeoppgave: søkefelt med debounce
 
 **Kontekst:** Vi har et søkefelt som slår opp mot et API. Vi vil ikke sende et kall for hvert tastetrykk.
