@@ -7,21 +7,21 @@ NordVarehus AS er en norsk retail-kjede med 60 fysiske butikker og en nettbutikk
 ## Hva de ansatte trenger
 
 
-Se lagerstatus for egen butikk: hva er på lager, hva er snart tomt, hva er under bestilling
-Søke opp et produkt når en kunde spør, og se om nabobutikker har det
-Få beskjed når varer som er solgt i nettbutikken skal plukkes i butikken («click & collect») – dette må dukke opp innen få sekunder
-Registrere varemottak og manuelle lagerjusteringer (telling, svinn)
+- Se lagerstatus for egen butikk: hva er på lager, hva er snart tomt, hva er under bestilling
+- Søke opp et produkt når en kunde spør, og se om nabobutikker har det
+- Få beskjed når varer som er solgt i nettbutikken skal plukkes i butikken («click & collect») – dette må dukke opp innen få sekunder
+- Registrere varemottak og manuelle lagerjusteringer (telling, svinn)
 
 
 ## Tekniske rammer
 
 
-Backend tilbyr: REST-API for lager og produkter (ca. 300 ms svartid), og en event-strøm (WebSocket eller SSE) for lagerendringer og nye plukkordre
-Et typisk varehus har 15 000 produkter; den største butikken har 40 000
-Brukes på delte nettbrett (Android) og på PC i kassen. Wifi i lageret er ustabilt, særlig i kjølerom
-De ansatte har ikke egen bruker i dag – nettbrettet er logget inn som «butikken»
-Butikksjefer vil ha en enkel oversikt over dagens plukkordre og lagerbevegelser
-Tech-stacken skal være React og TypeScript. Resten er opp til deg.
+- Backend tilbyr: REST-API for lager og produkter (ca. 300 ms svartid), og en event-strøm (WebSocket eller SSE) for lagerendringer og nye plukkordre
+- Et typisk varehus har 15 000 produkter; den største butikken har 40 000
+- Brukes på delte nettbrett (Android) og på PC i kassen. Wifi i lageret er ustabilt, særlig i kjølerom
+- De ansatte har ikke egen bruker i dag – nettbrettet er logget inn som «butikken»
+- Butikksjefer vil ha en enkel oversikt over dagens plukkordre og lagerbevegelser
+- Tech-stacken skal være React og TypeScript. Resten er opp til deg.
 
 
 ## Oppgave 1 (hovedoppgave)
