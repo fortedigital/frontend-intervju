@@ -1,4 +1,4 @@
-# Case-brief (deles med kandidaten)
+# Case-brief 
 
 NordVarehus AS er en norsk retail-kjede med 60 butikker og en nettbutikk. De vil bygge et nytt lagerverktøy for butikkansatte.
 
@@ -17,8 +17,7 @@ NordVarehus AS er en norsk retail-kjede med 60 butikker og en nettbutikk. De vil
 
 Det finnes ikke én fasit. Vi er mer interessert i resonnementet og avveiningene dine enn i riktig svar. Still gjerne spørsmål underveis.
 
-## Alternativ A – Frontend (deles med kandidaten)
-
+## Alternativ A – Frontend 
 Backend-teamet tilbyr et REST-API for lager og produkter, og en event-strøm (WebSocket eller SSE) for lagerendringer og nye plukkordre. Tech-stacken er React og TypeScript. Resten er opp til deg.
 
 ### Oppgave
@@ -29,7 +28,7 @@ Skisser hvordan du ville bygget frontenden. Hvordan strukturerer du applikasjone
 
 Produktlisten på 40 000 rader skal være søkbar og vise lagerstatus live. Hvordan bygger du den så den er rask og tilgjengelig?
 
-## Alternativ B – Backend (deles med kandidaten)
+## Alternativ B – Backend 
 
 Frontend-teamet bygger en React-app for nettbrettene. Du skal designe backenden som støtter den. Kjører i Azure, ellers er teknologivalg opp til deg.
 
