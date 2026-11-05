@@ -1,33 +1,42 @@
-# Nesten-sanntids lagerdashboard for butikkansatte
+# Case-brief (deles med kandidaten)
 
-## Case-brief
+NordVarehus AS er en norsk retail-kjede med 60 butikker og en nettbutikk. De vil bygge et nytt lagerverktøy for butikkansatte.
 
-NordVarehus AS er en norsk retail-kjede med 60 fysiske butikker og en nettbutikk. Dataplattformen deres er nylig modernisert, og de har nå et API som eksponerer lagerstatus per butikk og produkt. Nå vil de bygge en ny frontend: et lagerdashboard for butikkansatte.
+## De ansatte trenger å
 
-## Hva de ansatte trenger
+- Se lagerstatus for egen butikk og søke opp produkter
+- Få beskjed innen få sekunder når en nettbutikk-ordre skal plukkes i butikken (click & collect)
+- Registrere varemottak og lagerjusteringer (telling, svinn)
 
+## Rammer
 
-- Se lagerstatus for egen butikk: hva er på lager, hva er snart tomt, hva er under bestilling
-- Søke opp et produkt når en kunde spør, og se om nabobutikker har det
-- Få beskjed når varer som er solgt i nettbutikken skal plukkes i butikken («click & collect») – dette må dukke opp innen få sekunder
-- Registrere varemottak og manuelle lagerjusteringer (telling, svinn)
+- Opptil 40 000 produkter per butikk
+- Brukes på delte Android-nettbrett og PC i kassen. Wifi på lageret er ustabilt
+- Lagerdata finnes i dag i ERP-systemet (Dynamics 365). Nettbutikken sender ordre via webhooks
+- Ingen eksisterende API eller frontend – dere starter fra blanke ark
 
+Det finnes ikke én fasit. Vi er mer interessert i resonnementet og avveiningene dine enn i riktig svar. Still gjerne spørsmål underveis.
 
-## Tekniske rammer
+## Alternativ A – Frontend (deles med kandidaten)
 
+Backend-teamet tilbyr et REST-API for lager og produkter, og en event-strøm (WebSocket eller SSE) for lagerendringer og nye plukkordre. Tech-stacken er React og TypeScript. Resten er opp til deg.
 
-- Backend tilbyr: REST-API for lager og produkter (ca. 300 ms svartid), og en event-strøm (WebSocket eller SSE) for lagerendringer og nye plukkordre
-- Et typisk varehus har 15 000 produkter; den største butikken har 40 000
-- Brukes på delte nettbrett (Android) og på PC i kassen. Wifi i lageret er ustabilt, særlig i kjølerom
-- De ansatte har ikke egen bruker i dag – nettbrettet er logget inn som «butikken»
-- Butikksjefer vil ha en enkel oversikt over dagens plukkordre og lagerbevegelser
-- Tech-stacken skal være React og TypeScript. Resten er opp til deg.
+### Oppgave
 
+Skisser hvordan du ville bygget frontenden. Hvordan strukturerer du applikasjonen, hvordan håndterer du data (henting, caching, sanntid, skriving), og hvordan får du den til å fungere på nettbrett med dårlig nett?
 
-## Oppgave 1 (hovedoppgave)
+### Hvis tid
 
-Skisser hvordan du ville designet og bygget denne applikasjonen. Tegn/beskriv frontend-arkitekturen: hvordan strukturerer du applikasjonen, hvordan håndterer du data (henting, caching, sanntidsoppdateringer, skriving), og hvordan sikrer du at den fungerer godt på nettbrett med dårlig nett. Vi diskuterer valgene dine underveis.
+Produktlisten på 40 000 rader skal være søkbar og vise lagerstatus live. Hvordan bygger du den så den er rask og tilgjengelig?
 
-## Oppgave 2 (hvis tid)
+## Alternativ B – Backend (deles med kandidaten)
 
-Produktlisten med 40 000 rader skal være søkbar, filtrerbar og vise lagerstatus som oppdateres live. Hvordan ville du bygget denne én komponenten slik at den er rask, tilgjengelig og ikke tegner om hele listen hver gang én vare endrer antall?
+Frontend-teamet bygger en React-app for nettbrettene. Du skal designe backenden som støtter den. Kjører i Azure, ellers er teknologivalg opp til deg.
+
+### Oppgave
+
+Skisser hvordan du ville bygget backenden. Hvordan får du lagerdata fra ERP og ordre fra nettbutikken inn, hvordan eksponerer du det til frontenden (API og sanntid), og hvordan håndterer du skriving fra nettbrett med ustabilt nett?
+
+### Hvis tid
+
+To nettbrett registrerer en lagerjustering på samme vare omtrent samtidig, det ene etter å ha vært uten nett i noen minutter. Hvordan håndterer backenden det?
